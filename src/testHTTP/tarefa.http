@@ -1,0 +1,45 @@
+@url = http://localhost:8080
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Im1hcmNvcyIsImlhdCI6MTUxNjIzOTAyMn0.Est1aeiXpzB-1I4-19_UAZf8vjgBnucCMrSQZPWhy7o
+
+###
+GET {{url}}/tarefa
+Authorization: Bearer {{token}}
+
+###
+GET {{url}}/tarefa/1
+Authorization: Bearer {{token}}
+
+###
+POST {{url}}/tarefa
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "titulo": "Tarefa gabam",
+    "descricao": "Descricao Tarefa gabam",
+    "dataInicio": "2024-12-08",
+    "dataConclusao": "2024-12-10"
+}
+
+
+###
+PUT {{url}}/tarefa/2
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "titulo": "Tarefa gari"
+}
+
+###
+DELETE {{url}}/tarefa/3
+Authorization: Bearer {{token}}
+
+###
+POST {{url}}/tarefa/3/2
+Authorization: Bearer {{token}}
+
+###
+DELETE {{url}}/tarefa/3/2
+Authorization: Bearer {{token}}
